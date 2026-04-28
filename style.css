@@ -1,0 +1,108 @@
+/* Base reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, #1cb5e0, #000046);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main wrapper */
+.container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Title */
+.title {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  }
+
+/* Search bar and button */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  width: 250px;
+  outline: none;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #f9a825;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #f57f17;
+}
+
+/* Weather card */
+.weather-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.weather-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  font-size: 1rem;
+  margin: 6px 0;
+  opacity: 0.9;
+}
+
+#temperature {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+#toggle-unit {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#toggle-unit:hover {
+  background: rgba(255, 255, 255, 0.5);
+  }
+#weather-icon {
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+  display: block;
+}
