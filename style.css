@@ -5,20 +5,24 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
 }
-
-/* Background */
-body {
+.body {
   background: linear-gradient(135deg, #1cb5e0, #000046);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
+/* Background */
+
 
 /* Main wrapper */
 .container {
   text-align: center;
   padding: 40px 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 /* Title */
