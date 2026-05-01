@@ -31,7 +31,7 @@ searchBtn.addEventListener("click", function() {
   // Fetch the weather data
   fetch(url)
     .then(response => response.json())
-    .then(data => {weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    .then(data => {weatherIcon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
       // Fill the card with real data
       cityName.textContent = data.name;
     currentTempC = data.main.temp;
