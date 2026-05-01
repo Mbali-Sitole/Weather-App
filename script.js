@@ -41,6 +41,7 @@ currentFeelsLikeC = data.main.feels_like;
       humidity.textContent = `Humidity: ${data.main.humidity}%`;
       wind.textContent = `Wind: ${data.wind.speed} km/h`;
       feelsLike.textContent = `Feels like: ${Math.round(data.main.feels_like)}°C`;
+      weatherIcon.style.display="block"   
     })
     .catch(error => {
       alert("City not found, please try again!");
