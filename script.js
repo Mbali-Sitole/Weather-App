@@ -11,6 +11,7 @@ const humidity = document.getElementById("humidity");
 const wind = document.getElementById("wind");
 const feelsLike = document.getElementById("feels-like");
 const toggleBtn = document.getElementById("toggle-unit");
+const weatherIcon = document.getElementById("weather-icon");
 let isCelsius = true;
 let currentTempC = 0;
 let currentFeelsLikeC = 0;
@@ -18,7 +19,6 @@ let currentFeelsLikeC = 0;
 // When the button is clicked, run this function
 searchBtn.addEventListener("click", function() {
   const city = cityInput.value;
-  const weatherIcon = document.getElementById("weather-icon");
 
   if (city === "") {
     alert("Please enter a city name!");
@@ -30,19 +30,19 @@ searchBtn.addEventListener("click", function() {
 
   // Fetch the weather data
   fetch(url)
-    .then(response => response.json())
-    .then(data => {weatherIcon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
-      // Fill the card with real data
-      cityName.textContent = data.name;
-    currentTempC = data.main.temp;
-currentFeelsLikeC = data.main.feels_like;
-      temperature.textContent = `${Math.round(data.main.temp)}°C`;
-      description.textContent = data.weather[0].description;
-      humidity.textContent = `Humidity: ${data.main.humidity}%`;
-      wind.textContent = `Wind: ${data.wind.speed} km/h`;
-      feelsLike.textContent = `Feels like: ${Math.round(data.main.feels_like)}°C`;
-      weatherIcon.style.display="block"   
-    })
+  .then(response => response.json())
+  .then(data => {
+   cityName.textContent = data.name;
+   currentTempC = data.main.temp;
+   currentFeelsLikeC = data.main.feels_like;
+   temperature.textContent = `${Math.round(data.main.temp)}°C`;
+   description.textContent = data.weather[0].description;
+   humidity.textContent = `Humidity: ${data.main.humidity}%`;
+   wind.textContent = `Wind: ${data.wind.speed} km/h`;
+   feelsLike.textContent = `Feels like: ${Math.round(data.main.feels_like)}°C`;
+   weatherIcon.style.display = "block";
+   weatherIcon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+})
     .catch(error => {
       alert("City not found, please try again!");
     });
