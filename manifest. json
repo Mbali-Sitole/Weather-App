@@ -1,0 +1,16 @@
+{
+  "name": "Weather App",
+  "short_name": "Weather",
+  "description": "A real-time weather app",
+  "start_url": "/Weather-App/",
+  "display": "standalone",
+  "background_color": "#000046",
+  "theme_color": "#1cb5e0",
+  "icons": [
+    {
+      "src": "https://openweathermap.org/img/wn/01d@2x.png",
+      "sizes": "100x100",
+      "type": "image/png"
+    }
+  ]
+}
